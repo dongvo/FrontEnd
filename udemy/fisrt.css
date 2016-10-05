@@ -1,0 +1,142 @@
+.modal-login {
+	width: 100%;
+	height: 100%;
+	background-color: green;
+	margin: 0 auto;
+	padding-top: 60px;
+	display: none;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.75); 
+}
+
+
+.modal-content {
+	width: 680px;
+	height: 400px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+.modal-box {
+	background-color: white;
+}
+
+.closex {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.loginbox {
+	background: #edeff1;
+	padding: 20px;
+}
+.loginbox, .modal-box, .modal-login {
+	border-radius: 6px;
+}
+.loginbox-inner {
+	width: 640px;
+	
+}
+.login-header {
+	font-size: 24px;
+	padding: 10px 0;
+	color: #355368;
+	text-align: center;
+	margin: 0;
+	border-bottom: 1px solid #d3d3d3;
+	font-weight: 300;
+}
+.login-body {
+	margin: 0;
+}
+.login-body:after{
+	clear: both;
+	display: table;
+	content: "";
+}
+.login-footer {
+	clear: both;
+	border-top: 1px solid #d3d3d3;
+	box-shadow: inset 0 1px #fff;
+	margin-top: 20px;
+	text-align: center;
+	padding-top: 16px;
+}
+.col-1 {
+	width: 279.5px;
+	padding: 20px;
+	float: left;
+}
+.col-1 label {
+	color: #355368;
+	font-size: 16px;
+	font-weight: bold;
+}
+.line-vertical {
+	width: 1px;
+	background: #d3d3d3;
+	float: left;
+	height: 270px;
+}
+
+
+
+.btn {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 100%;
+	background-color: white;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	font-weight: bold;
+	color: white;
+	font-size: 16px;
+}
+.btn-facebook {
+	margin-top: 10px;
+	background-color: #2b85c3;
+}
+.btn-google {
+	background-color: #d03a3c;
+}
+.btn-submit {
+	background-color: #159d1a;
+}
+
+.input {
+	margin: 10px 0;
+	width: 100%;
+}
+.txt-input {
+	height: 50px;
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	outline: 0;
+	padding-left: 45px;
+	font-size: 18px;
+	background-position: left;
+	background-position-x: 5px;
+	background-repeat: no-repeat;
+	color: #355368;
+}
+.email{
+	background-image: url('icon_email.png');
+}
+.passwd{
+	background-image: url('icon_password.png');
+}
