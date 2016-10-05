@@ -1,0 +1,203 @@
+<html>
+<head>
+
+<style>
+.content {
+	margin: 0 auto;
+	width: 450px;
+	padding: 10px 0;
+	position: relative;
+	font-size: 15px;
+	font-family: Arial;
+	border: 1px solid black;
+	background: green;
+}
+.form {
+	width: 100%;
+	position: relative;
+}
+.row {
+	padding: 10px 0;
+	clear: both;
+	height: 35px;
+	position: relative;
+}
+.lab {
+	float: left;
+	width: 25%;
+	text-align: right;
+	margin-right: 20px;
+	height: 35px;
+	line-height: 35px;
+}
+.input {
+	width: 65%;
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	
+}
+.form .txt {
+	height: 35px;
+	line-height: 35px;
+	width: 90%;
+}
+.radio {
+	width: 26px;
+}
+.button {
+	padding: 20px 10% 0 0;
+	height: 40px;
+}
+button {
+	height: 40px;
+	float: right;
+	padding: 5px 15px;
+}
+.error {
+	background: red;
+	height: 20px;
+	float: none;
+	padding-left: 30%;
+	display: none;
+}
+</style>
+</head>
+<body  onload="load()">
+
+<div class="page-content">
+	<div class="content">
+		<div>
+			<div class="form">
+				<div class="row">
+					<div class="lab">UserName</div>
+					<div class="input">
+						<input type="text" id="txtUser" class="txt" name="txtUser" onkeyup="checkUser()">
+					</div>
+				</div>
+				<div id="error-user" class="display-none error">username phai lon hon 6 ki tu</div>
+				<div class="row">
+					<div class="lab">Email(*)</div>
+					<div class="input">
+						<input type="text" id="txtEmail" class="txt" name="txtEmail" onkeyup="checkEmail()">
+					</div>
+				</div>
+				<div id="error-email" class="display-none error">email co dang abc@def.xyz</div>
+				<div class="row">
+					<div class="lab">Password</div>
+					<div class="input">
+						<input type="password" id="txtPass" class="txt" name="txtPass" onkeyup="checkPass()">
+					</div>
+				</div>
+				<div id="error-pass" class="display-none error">password co 0-9, a-z, A-Z, @!%*?&$-_</div>
+				<div class="row">
+					<div class="lab">Enterpass</div>
+					<div class="input">
+						<input type="password" id="txtRepass" class="txt" name="txtRepass" onkeyup="checkRepass()">
+					</div>
+				</div>
+				<div id="error-repass" class="display-none error">password khong trung</div>
+				<div class="row">
+					<div class="lab">GioiTinh:</div>
+					<div class="input">
+						<input type="radio" class="radio" name="gioitinh" value="nam">Nam
+						<input type="radio" class="radio" name="gioitinh" value="nu">Nu
+					</div>
+				</div>
+				<div class="row">
+					<div class="lab">Quoc gia</div>
+					<div class="input">
+						<select class="txt" id="selCountry" >
+							  <option value="">Chon quoc gia</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="button">
+				<button id="btn-regis" onclick="check()"> Register</button>
+			</div>
+		</div>
+	</div>
+	
+
+</div>
+<script>
+
+var inputUser = document.getElementById("txtUser"),
+	inputPass = document.getElementById("txtPass"),
+	inputRepass = document.getElementById("txtRepass"),
+	inputEmail = document.getElementById("txtEmail");
+var Sel = document.getElementById("selCountry");
+var country = ["Viet Nam", "Anh", "My"];
+var tempCountry = '<option value="qg">qg</option>';
+
+function load(){
+	var inner = Sel.innerHTML;
+	var i, leng = country.length;
+	var newTemp = tempCountry;
+	for(i = 0; i < leng; i++){
+		inner = inner.concat(newTemp.replace(/qg/g, country[i]))
+	}
+	Sel.innerHTML = inner;
+}
+	
+function checkEmail(){
+	var valEmail = inputEmail.value;
+	if(!validateEmail(valEmail))
+		document.getElementById("error-email").style.display="block";
+	else 
+		document.getElementById("error-email").style.display="none";
+}
+function checkUser(){
+	var valUser = inputUser.value;
+	if(String(valUser).length < 5)
+		document.getElementById("error-user").style.display="block";
+	else 
+		document.getElementById("error-user").style.display="none";
+}
+function checkPass(){
+	var valPass = inputPass.valu
+	var test = validatePass(valPass);
+	if(!test)
+		document.getElementById("error-pass").style.display="block";
+	else 
+		document.getElementById("error-pass").style.display="none";
+}
+
+function checkRepass(){
+	var valPass = inputPass.value,
+		valRepass = inputRepass.value,
+		vali = validateRePass(valPass, valRepass);
+	if(!vali)
+		document.getElementById("error-repass").style.display="block";
+	else 
+		document.getElementById("error-repass").style.display="none";
+}
+
+	
+function check(){
+	checkEmail();
+	checkUser();
+	checkPass();
+	checkRepass();
+}
+function validateEmail(email){
+	var em = /^([a-z0-9_\.\-\+]+)@([\da-z\.\-]+)\.([a-z\.]{2,6})$/i;
+	return em.test(email);
+}
+function validatePass(passwd){
+	var pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&$-_])[A-Za-z\d$@$!%*?&$-_]{8,}$/i;
+	return pass.test(passwd);
+}
+function validateRePass(pass, repass){
+	if(pass === repass)
+		return true;
+	else 
+		return false;
+}
+
+
+
+</script>
+</body>
+</html>
