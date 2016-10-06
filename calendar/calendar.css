@@ -1,0 +1,143 @@
+
+html, body { 
+	margin: 0; 
+	padding: 0;
+	font-family: Verdana,sans-serif; 
+}
+
+table {
+	width: 100%;
+  border-collapse: collapse;
+  
+}
+
+th {
+  border: 1px solid #A8A8A8;
+  vertical-align: top;
+}
+tr {
+	 border-bottom: 1px solid #A8A8A8;
+}
+td {
+  height: 50px;
+  width: 50px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+}
+.wrap {
+	width: 360px;
+	margin: 0 auto;
+	border: solid 1px black;
+	position: relative;
+}
+.cal-header{
+	width: 100%;
+	height: 50px;
+	background-color: red;
+}
+.btn-control {
+	width: 40px;
+	height: 50px;
+	color: blue;
+	font-size: 26px;
+	font-weight: bolder;
+	background-color: yellow;
+	position: absolute;
+}
+.month {
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	font-size: 20px;
+	margin: 0 auto;
+}
+.btn-left {
+	top: 0;
+	left: 0;
+}
+.btn-right{
+	top: 0;
+	right: 0;
+}
+
+.weekday {
+	margin: 0;
+	padding: 10px 0;
+	background: #eee;
+}
+.weekday > li {
+	width: 12.8%;
+	display: inline-block;
+	text-align: center;
+}
+.day {
+	padding: 10px 0;
+	margin: 0;
+	background: #fff;
+}
+.day > li {
+	display: inline-block;
+	width: 12.8%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 12px;
+	font-weight: bold;
+}
+.not-now {
+	color: #bbb;
+	background: #ddd;
+}
+.now {
+	background: #ccc;
+}
+.active {
+	background: #aaa;
+}
+.cal-body {
+	overflow: hidden;
+}
+.cal-footer {
+	padding: 10px 0;
+	background-color: red;
+	color: white;
+	text-align: center;
+	border-top: solid 1px black
+}
+#today {
+	height: 30px;
+	
+}
+.Week {
+	background-color: #ddd;
+}
+
+.prevmonth {
+  color: #9c9c9c;
+}
+
+.nextmonth {
+  color: #9c9c9c;
+}
+
+.currentmonth{
+  background-color: #e0e0e0;
+}
+.now {
+	color: red;
+	background-color: yellow;
+}
+
+
+
+
+
