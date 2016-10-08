@@ -1,0 +1,51 @@
+
+.clock-content {
+	margin: 0 auto;
+	text-align: center;
+	background: red;
+	font-family: 'Audiowide', cursive;
+	font-size: 28px;
+	color: blue;
+}
+.clock {
+	width:200px;
+	margin: 0 auto;
+}
+.time {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.alarm {
+	width: 300px;
+	padding: 10px 10px;
+	background: #a8b4b5;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.alarm-input {
+	margin: 0;
+	width: 148px;
+	border: none;
+	height: 40px;
+}
+.alarm input {
+	margin-bottom: 5px;
+	padding-left: 6px;
+}
+.btn-stop {
+	background: rgb(247, 131, 131);
+}
+.btn-stop:hover{
+	background: red;
+}
+.btn-set {
+	background: #68ca68;
+}
+.btn-set:hover{
+	background: #00ff00;
+}
+
+
+

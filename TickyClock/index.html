@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ticky Clock</title>
+<link type="text/css" rel="stylesheet" href="content/general.css">
+<link type="text/css" rel="stylesheet" href="content/clock.css">
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+
+</head>
+<body>
+	<div class="page">
+		
+		<div class="clock-content">
+			<label>Now is: </label>
+			<div class="clock" id="clock">
+			
+			</div>
+			<div class="time" id="time">
+			
+			</div>
+		</div>
+		<div class="alarm" >
+			<input type="text" id="set-h" class="alarm-input" placeholder="HH" />
+			<input type="text" id="set-m" class="alarm-input" placeholder="MM" />
+			<button id="btn-set" class="alarm-input btn-set">Set</button>
+			<button id="btn-stop" class="alarm-input btn-stop">Stop</button>
+		</div>
+		
+		
+		
+		
+		<audio id="alert" controls style="display: none;">
+		  <source src="T (Yoon Mi Rae) - I Love You.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<script src="Script/genaral.js"></script>
+	<script src="Script/clock.js"></script>
+</body>
+</html>
