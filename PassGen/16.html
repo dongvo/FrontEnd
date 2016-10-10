@@ -1,0 +1,36 @@
+<html>
+<head>
+
+</head>
+<body>
+<div class="container">
+	<form action="" name="passGen">
+		<input type="text" size="18" name="output">
+		<input type="button" value="Generate password" onclick="populateform(this.form.length.value)"></br>
+		<strong>password length: </strong>
+		<input type="text" name="length" size="3" value="6">
+	
+	</form>
+</div>
+
+<script>
+	var key ="abcdefghijklmnopqrstuvxywz1234567890!@#$%^&*";
+	var temp='';
+	function generatepass(length){
+		tmp ="";
+		for(i = 0; i < length; i++){
+			tmp += key.charAt(Math.floor(Math.random()*key.length))
+		}
+		return tmp;
+	}
+	function populateform(enterlength){
+		document.passGen.output.value = generatepass(enterlength);
+	}
+
+
+
+</script>
+
+
+</body>
+</html>
