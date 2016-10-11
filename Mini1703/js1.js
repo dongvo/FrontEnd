@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	
-	var max = 10;
+	var max = 100;
 	
 	var Input = {
 		init: function(){
