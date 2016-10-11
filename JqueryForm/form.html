@@ -1,0 +1,73 @@
+<html>
+<head>
+
+<link type="text/css" href="content.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="content">
+		<div class="contour">
+			<div class="header-form">
+				Register
+			</div>
+			<div id="alert-error">
+			
+			</div>
+			<div class="form">
+				<div class="row">
+					<div class="lab">UserName(*)</div>
+					<div class="input">
+						<input type="text" id="txtUser" class="txt" name="txtUser">
+					</div>
+				</div>
+				<div class="row">
+					<div class="lab">Email(*)</div>
+					<div class="input">
+						<input type="text" id="txtEmail" class="txt" name="txtEmail">
+					</div>
+				</div>
+				<div class="row">
+					<div class="lab">Password(*)</div>
+					<div class="input">
+						<input type="password" id="txtPass" class="txt" name="txtPass">
+					</div>
+				</div>
+				<div class="row">
+					<div class="lab">Enterpass(*)</div>
+					<div class="input">
+						<input type="password" id="txtRepass" class="txt" name="txtRepass">
+					</div>
+				</div>
+				<div class="row">
+					<div class="lab">GioiTinh:</div>
+					<div class="input">
+						<input type="radio" class="radio" name="gioitinh" value="nam">Nam
+						<input type="radio" class="radio" name="gioitinh" value="nu">Nu
+					</div>
+				</div>
+				<div class="row">
+					<div class="lab">Quoc gia</div>
+					<div class="input">
+						<select class="txt" id="selCountry" >
+							  <option value="">Chon quoc gia</option>
+							  <option value="VN">Viet Nam</option>
+							  <option value="US">My</option>
+							  <option value="EN">Anh</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="button">
+				<button id="btn-regis" > Register</button>
+				<button id="btn-save" > Save</button>
+			</div>
+		</div>
+	</div>
+	
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>
